@@ -78,7 +78,7 @@ def analyze_repo(root_dir, exclude_dirs=None, exclude_files=None, include_extens
         exclude_files = ['*.min.js', '*.min.css', '*.map', '*.pyc', '*.g.dart']
     
     if include_extensions is None:
-        include_extensions = ['dart', '.py', '.js', '.jsx', '.ts', '.tsx', '.java', '.cpp', '.h', '.css', '.scss']
+        include_extensions = ['.dart', '.py', '.js', '.jsx', '.ts', '.tsx', '.java', '.cpp', '.h', '.css', '.scss']
     
     print("\nConfiguration:")
     print(f"- Excluded directories: {', '.join(exclude_dirs)}")
