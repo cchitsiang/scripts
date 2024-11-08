@@ -1,3 +1,22 @@
+"""
+PostgreSQL Data Dictionary Generator
+
+This script connects to a PostgreSQL database and generates a comprehensive data dictionary
+in Microsoft Word format. It includes:
+- Table listings with their columns
+- Data types (with special handling for enums)
+- Nullable status for each column
+- Foreign key relationships
+- Custom formatting and styling for better readability
+
+The output is saved as 'postgres_data_dictionary.docx' with tables organized in a 
+grid format with headers and consistent styling.
+
+Requirements:
+- psycopg2 for PostgreSQL connection
+- python-docx for Word document generation
+"""
+
 import psycopg2
 from docx import Document
 from docx.shared import Pt
