@@ -34,11 +34,6 @@ print("Database connection successful!")
 
 heading = "ClickHouse Data Dictionary"
 filename = "clickhouse_data_dictionary.docx"
-
-# Create a Word document
-doc = Document()
-doc.add_heading(heading, level=1)
-
 # Add this dictionary for foreign key mappings
 FK_MAPPINGS = {
     'stepId': 'postgres.step.id',
@@ -46,6 +41,10 @@ FK_MAPPINGS = {
     'templateId': 'postgres.template.id',
     'campaignId': 'postgres.campaign.id'
 }
+
+# Create a Word document
+doc = Document()
+doc.add_heading(heading, level=1)
 
 # Function to fetch table metadata
 def fetch_table_metadata():
